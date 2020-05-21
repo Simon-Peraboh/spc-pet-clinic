@@ -1,4 +1,4 @@
-package spc.guruspring5.spcpetclinic.model;
+package spc.guruspring5.model;
 /**
  * spc 21/5/20
  */
