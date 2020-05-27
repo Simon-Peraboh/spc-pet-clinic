@@ -25,4 +25,10 @@
     <dependencies>
     </dependencies>
 
+    <scm>
+        <developerConnection>scm:git:git@github.com:Simon-Peraboh/spc-pet-clinic.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+
 </project>
