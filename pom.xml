@@ -25,7 +25,8 @@
     </dependencies>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:Simon-Peraboh/spc-pet-clinic.git</developerConnection>
+<!--        <developerConnection>scm:git:git@github.com:Simon-Peraboh/spc-pet-clinic.git</developerConnection>-->
+        <developerConnection>scm:git:https://github.com/ximanta/spc-pet-clinic.git</developerConnection>
         <tag>spc-pet-clinic-0.0.1</tag>
     </scm>
 
