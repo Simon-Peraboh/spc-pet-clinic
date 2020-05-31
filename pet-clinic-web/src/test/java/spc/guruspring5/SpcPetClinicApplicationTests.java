@@ -1,4 +1,4 @@
-package guruspring5;
+package spc.guruspring5;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
