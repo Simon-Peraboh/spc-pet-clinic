@@ -14,7 +14,7 @@
     </parent>
     <groupId>spc.guruspring5</groupId>
     <artifactId>spc-pet-clinic</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>spc-pet-clinic</name>
     <description>The SPC Pet Clinic Project</description>
 
@@ -26,7 +26,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:Simon-Peraboh/spc-pet-clinic.git</developerConnection>
-        <tag>spc-pet-clinic-0.0.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
 
