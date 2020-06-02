@@ -3,7 +3,7 @@ package spc.guruspring5.model;
 /**
  * spc 21/5/20
  */
-public class Person {
+public class Person extends BaseEntity {
 
     private String firstName;
     private String lastName;
