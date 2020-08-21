@@ -31,7 +31,7 @@
 
 
 <scm>
-    <developerConnection>scm:git:https://github.com/Simon-Peraboh/spc-pet-clinic.git</developerConnection>
+    <developerConnection>scm:git:git@github.com:Simon-Peraboh/spc-pet-clinic.git</developerConnection>
     <tag>HEAD</tag>
 </scm>
 
