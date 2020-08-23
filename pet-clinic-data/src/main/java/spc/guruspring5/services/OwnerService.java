@@ -2,18 +2,13 @@ package spc.guruspring5.services;
 
 import spc.guruspring5.model.Owner;
 
-import java.util.Set;
 
 /**
  * spc 02-06-20
  */
-public interface OwnerService {
+public interface OwnerService extends CrudService<Owner, Long> {
 
     Owner findByLastName( String lastName);
 
-    Owner findById(Long id);
 
-    Owner save( Owner owner);
-
-    Set<Owner> findAll();
 }
