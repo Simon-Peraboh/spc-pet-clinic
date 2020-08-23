@@ -6,7 +6,7 @@
 
 <groupId>spc.guruspring5</groupId>
 <artifactId>spc-pet-clinic</artifactId>
-<version>0.0.3</version>
+<version>0.0.3-SNAPSHOT</version>
 
 <modules>
     <module>pet-clinic-data</module>
@@ -32,7 +32,7 @@
 
 <scm>
     <developerConnection>scm:git:git@github.com:Simon-Peraboh/spc-pet-clinic.git</developerConnection>
-    <tag>spc-pet-clinic-0.0.3</tag>
+    <tag>HEAD</tag>
 </scm>
 
 </project>
