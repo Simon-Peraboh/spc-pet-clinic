@@ -6,8 +6,6 @@ import spc.guruspring5.model.Owner;
 import spc.guruspring5.model.Vet;
 import spc.guruspring5.services.OwnerService;
 import spc.guruspring5.services.VetService;
-import spc.guruspring5.services.map.OwnerServiceMap;
-import spc.guruspring5.services.map.VetServiceMap;
 
 /**
  * spc 27/08/20
@@ -18,9 +16,10 @@ public class DataLoader implements CommandLineRunner  {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+
+        this.vetService = vetService;
     }
 
 

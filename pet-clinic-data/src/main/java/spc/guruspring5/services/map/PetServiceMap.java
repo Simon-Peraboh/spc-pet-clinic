@@ -1,10 +1,11 @@
 package spc.guruspring5.services.map;
 
+import org.springframework.stereotype.Service;
 import spc.guruspring5.model.Pet;
 import spc.guruspring5.services.PetService;
 
 import java.util.Set;
-
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
