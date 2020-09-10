@@ -3,8 +3,10 @@ package spc.guruspring5.bootsrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import spc.guruspring5.model.Owner;
+import spc.guruspring5.model.PetType;
 import spc.guruspring5.model.Vet;
 import spc.guruspring5.services.OwnerService;
+import spc.guruspring5.services.PetTypeService;
 import spc.guruspring5.services.VetService;
 
 /**
@@ -15,17 +17,27 @@ public class DataLoader implements CommandLineRunner  {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
         this.ownerService = ownerService;
 
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
 
 
     //the bootstrap class ultimate goal was to manage data by itself but will be refactored to spring data management
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog.setName("Dog");
+        PetType saveDogPetType = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        cat.setName("Cat");
+        PetType saveCatPetType = petTypeService.save(cat);
 
         Owner owner1 = new Owner();
         owner1.setFirstName("Temi");

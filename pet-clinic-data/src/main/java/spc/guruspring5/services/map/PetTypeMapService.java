@@ -1,5 +1,6 @@
 package spc.guruspring5.services.map;
 
+import org.springframework.stereotype.Service;
 import spc.guruspring5.model.PetType;
 import spc.guruspring5.services.PetTypeService;
 
@@ -8,6 +9,7 @@ import java.util.Set;
 /**
  * spc 10/9/20
  */
+@Service
 public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
     @Override
     public Set<PetType> findAll() {
