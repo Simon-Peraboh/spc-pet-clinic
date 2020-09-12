@@ -3,11 +3,14 @@ package spc.guruspring5.bootsrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import spc.guruspring5.model.Owner;
+import spc.guruspring5.model.Pet;
 import spc.guruspring5.model.PetType;
 import spc.guruspring5.model.Vet;
 import spc.guruspring5.services.OwnerService;
 import spc.guruspring5.services.PetTypeService;
 import spc.guruspring5.services.VetService;
+
+import java.time.LocalDate;
 
 /**
  * spc 27/08/20
@@ -42,12 +45,32 @@ public class DataLoader implements CommandLineRunner  {
         Owner owner1 = new Owner();
         owner1.setFirstName("Temi");
         owner1.setLastName("Lawrence");
+        owner1.setAddress("Congress Road");
+        owner1.setCity("Mowe");
+        owner1.setTelephone("12345678");
+
+        Pet spcsPet = new Pet();
+        spcsPet.setPetType(saveDogPetType);
+        spcsPet.setOwner(owner1);
+        spcsPet.setBirthDate(LocalDate.now());
+        spcsPet.setName("Tiger");
+        owner1.getPets().add(spcsPet);
 
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Tumi");
         owner2.setLastName("Adewale");
+        owner2.setAddress("Congress Road");
+        owner2.setCity("Mowe");
+        owner2.setTelephone("12345678");
+
+        Pet mcginsCat = new Pet();
+        mcginsCat.setPetType(saveCatPetType);
+        mcginsCat.setOwner(owner2);
+        mcginsCat.setBirthDate(LocalDate.now());
+        mcginsCat.setName("Beauty");
+        owner2.getPets().add(mcginsCat);
 
         ownerService.save(owner2);
 
