@@ -1,14 +1,16 @@
 package spc.guruspring5.services.map;
 
+import org.springframework.stereotype.Service;
 import spc.guruspring5.model.Specialty;
-import spc.guruspring5.services.SpecialtiesService;
+import spc.guruspring5.services.SpecialtyService;
 
 import java.util.Set;
 
 /**
  * spc 12/09/20
  */
-public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtiesService {
+@Service
+public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
     @Override
     public Set<Specialty> findAll() {
         return super.findAll();
