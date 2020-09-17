@@ -1,11 +1,18 @@
 package spc.guruspring5.model;
 
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+
 /**
  * spc 21/5/20
  */
+@MappedSuperclass
 public class Person extends BaseEntity {
 
+    @Column(name = "firstName")
     private String firstName;
+
+    @Column(name = "lastName")
     private String lastName;
 
     public String getFirstName() {
