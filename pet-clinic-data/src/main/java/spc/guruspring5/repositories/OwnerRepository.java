@@ -7,4 +7,6 @@ import spc.guruspring5.model.Owner;
  * spc 18/9/20
  */
 public interface OwnerRepository extends CrudRepository<Owner, Long> {
+
+    Owner findByLastName (String lastName);
 }
