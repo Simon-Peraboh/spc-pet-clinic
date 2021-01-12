@@ -1,6 +1,7 @@
 package spc.guruspring5.services.springdatajpa;
 
 import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 import spc.guruspring5.model.Vet;
 import spc.guruspring5.repositories.VetRepository;
 import spc.guruspring5.services.VetService;
@@ -11,6 +12,7 @@ import java.util.Set;
 /**
  * spc 12/01/21
  */
+@Service
 @Profile("springdatajpa")
 public class VetSDJpaService implements VetService {
 
