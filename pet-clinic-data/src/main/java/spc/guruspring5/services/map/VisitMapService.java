@@ -1,6 +1,7 @@
 package spc.guruspring5.services.map;
 
 
+import org.springframework.stereotype.Service;
 import spc.guruspring5.model.Visit;
 import spc.guruspring5.services.VisitService;
 
@@ -9,6 +10,7 @@ import java.util.Set;
 /**
  * spc 18/01/21
  */
+@Service
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
 
     @Override

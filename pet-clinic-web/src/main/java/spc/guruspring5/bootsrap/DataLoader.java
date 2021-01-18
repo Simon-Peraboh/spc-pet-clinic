@@ -3,10 +3,7 @@ package spc.guruspring5.bootsrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import spc.guruspring5.model.*;
-import spc.guruspring5.services.OwnerService;
-import spc.guruspring5.services.PetTypeService;
-import spc.guruspring5.services.SpecialtyService;
-import spc.guruspring5.services.VetService;
+import spc.guruspring5.services.*;
 
 import java.time.LocalDate;
 
@@ -20,14 +17,17 @@ public class DataLoader implements CommandLineRunner  {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService, VisitService visitService) {
         this.ownerService = ownerService;
 
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
 
@@ -95,6 +95,12 @@ public class DataLoader implements CommandLineRunner  {
         owner2.getPets().add(mcginsCat);
 
         ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(mcginsCat);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Stay in touch");
+
 
         System.out.println("Loaded Owners......");
 
